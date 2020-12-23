@@ -342,13 +342,3 @@ multipliers_test_ardl <- data_list %>%
   map(~ auto_ardl(Consumption ~ Income + House_price + Share_price, data = .x, max_order = 5)) %>%
   map("best_model") %>%
   map(multipliers)
-
-#### NY METODE
-
-
-
-
-#data_list_diff_2 <- map(data_list_diff, ~ (.x %>%
-#  mutate_at(vars(-Country, -date), ~ (.x %>% (function(x){c(NA,diff(x))}))) %>%
-#  mutate_at(vars(-Country, -date), ~ (.x %>% (function(x){xts(x, order.by = date)}))) %>%
-#  .[-1,]))
