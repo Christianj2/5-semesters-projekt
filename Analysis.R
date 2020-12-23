@@ -13,7 +13,7 @@ list_netnat
 
 list_share_price
 
-##### UPLOAD DATA ON PUT IT IN LIST####
+##### UPLOAD DATA AND PUT IT IN LIST####
 
 #data <- cbind.data.frame(consum$Country, consum$date,log(consum$Value), log(netnat$Value), log(house_price$Value), log(share_price$Value), logu2$e_squared, dd$fitted.values)
 
